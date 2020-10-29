@@ -1,7 +1,8 @@
-(import (scheme base) 
-        (parser)
-        (template)
-        (cyclone test))
+(import 
+  (cyclone test)
+  (cyclone web temple parser)
+  (cyclone web temple)
+  (scheme base) )
 
 (define view-1
 "<html>
