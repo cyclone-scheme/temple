@@ -1,3 +1,8 @@
+;;;; Temple template engine
+;;;;
+;;;; This is the top-level module for the engine, and provides a basic
+;;;; renderer and caching capabilities.
+;;;;
 (define-library (cyclone web temple)
   (import
     (scheme base)
