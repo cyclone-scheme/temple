@@ -108,17 +108,17 @@ more text
   (test/output
     "Basic views with no embedded Scheme"
     view-2
-    (render "view-2.html" '()))
+    (render "examples/view-2.html" '()))
 
   (test/output "Basic view with comments"
     view-3
-    (render "view-3.html" '()))
+    (render "examples/view-3.html" '()))
 
   (test/output
     "Basic view with expressions"
     view-4
     (render
-      "view-4.html" 
+      "examples/view-4.html" 
       '((row . '("view-2.html" . "View 2"))
         (link . car)
         (desc . cdr))))
@@ -127,7 +127,7 @@ more text
     "Basic view with statements and expressions"
     view-1
     (render
-      "view-1.html" 
+      "examples/view-1.html" 
       '((rows . '(
                   ("view-1.html" . "View 1")
                   ("view-2.html" . "View 2")
