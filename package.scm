@@ -1,6 +1,6 @@
 (package
  (name temple)
- (version 0.1)
+ (version 0.2)
  (license "MIT")
  (authors "Justin Ethier")
  (maintainers "Justin Ethier")
@@ -17,6 +17,6 @@
   (name (cyclone web temple parser))
   (description "Temple's parser"))
  (library
-  (name (cyclone web trace))
+  (name (cyclone web temple trace))
   (description "Debug tracing"))
 )
