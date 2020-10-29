@@ -1,3 +1,8 @@
+;;;; Temple template engine
+;;;;
+;;;; This module contains code to parse input and return view contents in
+;;;; S-expression form.
+;;;;
 (define-library (cyclone web temple parser)
   (import
     (scheme base)
@@ -7,16 +12,24 @@
   )
   (export
     parse
+    *read-size*
+    string-pos
   )
   (begin
 
-; Algorithm
-;
-; - read string from input
-; - does string contain embedded expr?
-;   - yes, split string at that point, put beginning into expr list, parse the rest (possibly more reads req'd)
-;   - no, append to string list
-;
+;;
+;; High-level Algorithm
+;;
+;; - Read string from input
+;; - Does string contain embedded expr?
+;;   - yes, split string at that point
+;;       place what we read so far into input list as "normal text"
+;;       read contents of tag and place into input list as code
+;;   - no, append to input list as normal text
+;; - Once we are done reading input list, convert it from
+;;   text to an S-expression tree
+;; - Return the tree for use by external (to this module) renderer
+;;
 
 (define *read-size* 1024)
 
