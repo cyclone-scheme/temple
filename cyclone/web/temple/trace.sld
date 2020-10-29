@@ -1,4 +1,4 @@
-(define-library (trace)
+(define-library (cyclone web temple trace)
   (export
     trace
     set-trace-level!

@@ -1,4 +1,4 @@
-(define-library (template) ;; TODO: (cyclone web template)
+(define-library (cyclone web temple)
   (export
     render
   )

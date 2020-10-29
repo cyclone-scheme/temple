@@ -1,4 +1,4 @@
-(define-library (parser) ;; TODO: (cyclone web template parser)
+(define-library (cyclone web temple parser)
   (export
     parse
   )
