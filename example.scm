@@ -1,6 +1,5 @@
 (import (scheme base)
-        (parser)
-        (template))
+        (cyclone web temple))
 
 ;; TODO: 
 ;; - enhanced cache to take file timestamp into account? see below
