@@ -1,12 +1,12 @@
 (define-library (cyclone web temple parser)
-  (export
-    parse
-  )
   (import
     (scheme base)
     (scheme read)
     (scheme cyclone util)
-    (trace)
+    (cyclone web temple trace)
+  )
+  (export
+    parse
   )
   (begin
 
