@@ -9,6 +9,7 @@
     (scheme eval)
     (scheme read)
     (scheme repl)
+    (scheme cyclone pretty-print)
     (srfi 69)
     (cyclone web temple parser)
     (cyclone web temple trace)
@@ -17,6 +18,7 @@
     render
     get-parse-tree
     build-parse-tree
+    ;compile
   )
   (begin
     ;; Setup a cache for view parse trees, so we don't have to 
@@ -69,5 +71,16 @@
           args)
         (trace `(DEBUG render ,view-sexpr))
         (eval (cons 'begin view-sexpr) env)))
+
+    ; Future idea
+    ;(define (compile view lib fnc)
+    ;  (let ((t (build-parse-tree view)))
+    ;    `(define-library ,lib
+    ;      (import (scheme base))
+    ;      (export ,fnc)
+    ;      (begin
+    ;        (define (,fnc ) ;; TODO: how to pass args???
+    ;          ,(pretty-print t)
+    ;        )) )))
   )
 )
