@@ -16,3 +16,4 @@ Scheme code may be embedded in one of the following sets of tags:
 
 # Examples
 
+See example views under [examples](examples).
