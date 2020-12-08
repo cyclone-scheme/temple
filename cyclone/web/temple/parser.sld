@@ -226,8 +226,10 @@
                  (parse-expr! buf 2 #\% #t)
                  (loop buf))
                 (else
-                  (error "TODO: parse scheme expression")
-                  (exit 1)))))  ;; TODO: (loop buf)
+                  (buf:set-exprs! buf (cons "{" (buf:exprs buf)))
+                  (buf:set-str! buf 
+                    (substring (buf:str buf) 1 (string-length (buf:str buf))))
+                  (loop buf))))) ;; No scheme, keep going
           (else
             (buf:set-exprs! buf (cons (buf:str buf) (buf:exprs buf)))
             (buf:read-next-string! buf)

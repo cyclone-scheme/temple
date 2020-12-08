@@ -9,6 +9,8 @@
 <head><title>Test View></title></head>
 <body>
 
+{
+ {
 
   <p>
     <a href=\"view-1.html\">
