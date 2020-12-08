@@ -1,6 +1,6 @@
 (package
  (name temple)
- (version 0.2)
+ (version 0.3)
  (license "MIT")
  (authors "Justin Ethier")
  (maintainers "Justin Ethier")
